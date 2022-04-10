@@ -1,28 +1,30 @@
 import random
 
 
+# Class variables and instance variables
 class Enemy:
-    
-    # This code runs when the class is been innitiation or instaciated
-    # It helps us make it more dydamic so we can send arguments into the class
-    # and that helps us for example initiate to instances of this class with the same
-    # objects with different properties
+    hp = 200  # This is class variable
+
     def __init__(self, atkl, atkh):
+        # These are instance variables
         self.atkl = atkl
         self.atkh = atkh
 
 
-
     def getAtk(self):
-        print(self.atkl)
+        print("atk is", self.atkl)
+
+    def getHp(self):
+        print("Hp is", self.hp)
 
 
 enemy1 = Enemy(40, 49)
 enemy1.getAtk()
+enemy1.getHp()
 
 enemy2 = Enemy(75, 90)
 enemy2.getAtk()
-
+enemy2.getHp()
 
 '''
 playerhp = 260
