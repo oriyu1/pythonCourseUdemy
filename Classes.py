@@ -1,19 +1,26 @@
 import random
 
 
-class Enemy:   # classes good if we want to create more than one of the same (or almost same) object/instance
-    atkl = 60
-    atkh = 80
+class Enemy:
+    
+    # This code runs when the class is been innitiation or instaciated
+    # It helps us make it more dydamic so we can send arguments into the class
+    # and that helps us for example initiate to instances of this class with the same
+    # objects with different properties
+    def __init__(self, atkl, atkh):
+        self.atkl = atkl
+        self.atkh = atkh
 
-    def getAtk(self):     # self if - this instance of the object
-        print(self.atkl)  # atkl is not variable of the function so we need self
 
-# getAtk() # This won't work because it does'nt exit in the global scope
 
-enemy1 = Enemy()
+    def getAtk(self):
+        print(self.atkl)
+
+
+enemy1 = Enemy(40, 49)
 enemy1.getAtk()
 
-enemy2 = Enemy()
+enemy2 = Enemy(75, 90)
 enemy2.getAtk()
 
 
