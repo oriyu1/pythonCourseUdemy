@@ -110,3 +110,30 @@ math1 = do_math(5, 7)
 math2 = do_math(11, 34)
 
 print("First sum is", math1, "and the second sum is", math2)
+# %%
+# Import module and the regex module
+
+import re
+string = "'I AM NOT YELLING', she said. Tough we knew it to not be true."
+
+# rules in regex are in []
+newCapi = re.sub('[A-Z]', '', string) # replae any capital letter with nothing
+newSmal = re.sub('[a-z]', '', string) # same with small letters
+newSpe = re.sub('[.,\']', '', string) # remove specail characters (\ is for the ' character)
+newMix = re.sub('[.,\'a-zA-Z]', '', string) # altogether but space character still there
+newAll = re.sub('[.,\'A-Z+" "]', '', string) # also space ans leave small letters to see it
+
+
+print(string)
+print(newCapi)
+print(newSmal)
+print(newSpe)
+print(newMix)
+print(newAll)
+
+# Now we add numbers
+
+string = string + "6 298 - 345"
+print(string)
+new = re.sub('[^0-9]', '', string) # replace everything that is not a number
+print(new)
