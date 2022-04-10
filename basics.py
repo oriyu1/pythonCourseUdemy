@@ -121,7 +121,7 @@ newCapi = re.sub('[A-Z]', '', string) # replae any capital letter with nothing
 newSmal = re.sub('[a-z]', '', string) # same with small letters
 newSpe = re.sub('[.,\']', '', string) # remove specail characters (\ is for the ' character)
 newMix = re.sub('[.,\'a-zA-Z]', '', string) # altogether but space character still there
-newAll = re.sub('[.,\'A-Z+" "]', '', string) # also space ans leave small letters to see it
+newAll = re.sub('[.,\'A-Z" "]', '', string) # also space ans leave small letters to see it
 
 
 print(string)
@@ -137,3 +137,4 @@ string = string + "6 298 - 345"
 print(string)
 new = re.sub('[^0-9]', '', string) # replace everything that is not a number
 print(new)
+# %%
